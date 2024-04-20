@@ -2,7 +2,7 @@ name: ci
 
 on:
   schedule:
-    - cron: "0 */3 * * *"
+    - cron: "* * * * *"
   workflow_dispatch:
 
 jobs:
@@ -19,8 +19,8 @@ jobs:
       - name: Conditional commit
         if: env.commit == '1'
         run: |
-          git config --local user.email "broad.plugger0w@icloud.com"
-          git config --local user.name "kyrxie"
+          git config --local user.email "iamkxliu@gmail.com"
+          git config --local user.name "iamkxl"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull --rebase
           git commit --allow-empty -m "Make Program Every Day!"
