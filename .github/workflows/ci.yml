@@ -20,7 +20,7 @@ jobs:
         if: env.commit == '1'
         run: |
           git config --local user.email "iamkxliu@gmail.com"
-          git config --local user.name "iamkxl"
+          git config --local user.name "iamKXL"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull --rebase
           git commit --allow-empty -m "Make Program Every Day!"
